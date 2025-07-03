@@ -1,10 +1,14 @@
 {
-  "name": "Blank new tab page",
+  "name": "Redirect to Kagi (dark mode)",
   "description": "Uses the \"chrome_url_overrides\" manifest key by replacing the user's default new tab page with a new html file.",
   "version": "0.3",
   "incognito": "split",
   "chrome_url_overrides": {
     "newtab": "blank.html"
   },
+   "web_accessible_resources": [{
+    "resources": ["redirect.js"],
+    "matches": ["<all_urls>"]
+  }],
   "manifest_version": 3
 }
